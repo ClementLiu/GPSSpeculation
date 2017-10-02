@@ -126,7 +126,7 @@ svg#rightRuler {
 .showup {
     background-color: black;
     box-shadow: 0 0 10px;
-    width: 30em;
+    width: 40em;
     z-index: 10;
     border-style: solid;
     border-width: 2em 1px 1px 1px;

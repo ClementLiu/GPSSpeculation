@@ -3,8 +3,8 @@ var mapCanvas = $('#mapCanvas'),
     box = $('#box');
 
 var mapCanvas = $('#mapCanvas');
-var clipWidth = 90;
-var clipHeight = 50;
+var clipWidth = 150;
+var clipHeight = 90;
 var wMove = 0;
 var hMove = 0;
 var wRis = mapCanvas.width() - clipWidth,
