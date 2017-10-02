@@ -204,8 +204,12 @@ div[href="#SelfDriveVision"] {
 }
 
 div[href="#CivilianGPS"] {
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+    line-height: 100px;
     margin-left: 30vw;
-    margin-top: 10vh;
+    margin-top: 8vh;
 }
 
 div[href="#TrackEmployee"] {
