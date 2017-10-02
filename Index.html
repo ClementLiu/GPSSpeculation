@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PopTest</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <!-- Include jQuery Popup Overlay -->
+    <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+    <!-- dragable  begin-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
+    <!-- dragable end -->
+    <link rel="stylesheet" type="text/css" href="asset/main.css">
+    <!-- font -->
+    <script src="https://use.typekit.net/rfv4bhd.js"></script>
+    <script>
+    try { Typekit.load({ async: true }); } catch (e) {}
+    </script>
+</head>
+
+<body>
+    <p id="locationInfo"></p>
+    <div id="backgroundImg"></div>
+    <!-- svg Begin -->
+    <div id="svgContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1701 60.5" id="topRuler" preserveAspectRatio="none">
+            <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                    <rect x="0.5" y="30" width="1700" height="1" style="fill: #86e85d" />
+                    <g>
+                        <line x1="0.5" y1="30.21" x2="0.5" y2="43" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="19.39" y1="30.21" x2="19.39" y2="43" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="38.28" y1="30.21" x2="38.28" y2="43" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="57.17" y1="30.21" x2="57.17" y2="42.99" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="76.06" y1="30.2" x2="76.06" y2="42.99" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="94.94" y1="30.2" x2="94.94" y2="42.99" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="113.83" y1="30.2" x2="113.83" y2="42.99" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="132.72" y1="30.2" x2="132.72" y2="42.98" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="151.61" y1="30.19" x2="151.61" y2="42.98" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="170.5" y1="30.19" x2="170.5" y2="42.98" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="189.39" y1="30.19" x2="189.39" y2="42.98" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="208.28" y1="30.19" x2="208.28" y2="42.97" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="227.17" y1="30.19" x2="227.17" y2="42.97" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="246.06" y1="30.18" x2="246.06" y2="42.97" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="264.94" y1="30.18" x2="264.94" y2="42.97" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="283.83" y1="30.18" x2="283.83" y2="42.96" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="302.72" y1="30.18" x2="302.72" y2="42.96" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="321.61" y1="30.17" x2="321.61" y2="42.96" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="340.5" y1="30.17" x2="340.5" y2="42.96" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="359.39" y1="30.17" x2="359.39" y2="42.96" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="378.28" y1="30.17" x2="378.28" y2="42.95" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="397.17" y1="30.16" x2="397.17" y2="42.95" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="416.06" y1="30.16" x2="416.06" y2="42.95" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="434.94" y1="30.16" x2="434.94" y2="42.95" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="453.83" y1="30.16" x2="453.83" y2="42.94" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="472.72" y1="30.15" x2="472.72" y2="42.94" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="491.61" y1="30.15" x2="491.61" y2="42.94" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="510.5" y1="30.15" x2="510.5" y2="42.94" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="529.39" y1="30.15" x2="529.39" y2="42.93" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="548.28" y1="30.14" x2="548.28" y2="42.93" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="567.17" y1="30.14" x2="567.17" y2="42.93" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="586.06" y1="30.14" x2="586.06" y2="42.93" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="604.94" y1="30.14" x2="604.94" y2="42.92" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="623.83" y1="30.14" x2="623.83" y2="42.92" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="642.72" y1="30.13" x2="642.72" y2="42.92" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="661.61" y1="30.13" x2="661.61" y2="42.92" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="680.5" y1="30.13" x2="680.5" y2="42.92" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="699.39" y1="30.13" x2="699.39" y2="42.91" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="718.28" y1="30.12" x2="718.28" y2="42.91" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="737.17" y1="30.12" x2="737.17" y2="42.91" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="756.06" y1="30.12" x2="756.06" y2="42.91" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="774.94" y1="30.12" x2="774.94" y2="42.9" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="793.83" y1="30.11" x2="793.83" y2="42.9" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="812.72" y1="30.11" x2="812.72" y2="42.9" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="831.61" y1="30.11" x2="831.61" y2="42.9" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="850.5" y1="30.11" x2="850.5" y2="42.89" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="869.39" y1="30.1" x2="869.39" y2="42.89" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="888.28" y1="30.1" x2="888.28" y2="42.89" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="907.17" y1="30.1" x2="907.17" y2="42.89" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="926.06" y1="30.1" x2="926.06" y2="42.88" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="944.94" y1="30.1" x2="944.94" y2="42.88" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="963.83" y1="30.09" x2="963.83" y2="42.88" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="982.72" y1="30.09" x2="982.72" y2="42.88" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1001.61" y1="30.09" x2="1001.61" y2="42.87" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1020.5" y1="30.09" x2="1020.5" y2="42.87" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1039.39" y1="30.08" x2="1039.39" y2="42.87" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1058.28" y1="30.08" x2="1058.28" y2="42.87" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1077.17" y1="30.08" x2="1077.17" y2="42.87" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1096.06" y1="30.08" x2="1096.06" y2="42.86" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1114.94" y1="30.07" x2="1114.94" y2="42.86" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1133.83" y1="30.07" x2="1133.83" y2="42.86" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1152.72" y1="30.07" x2="1152.72" y2="42.86" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1171.61" y1="30.07" x2="1171.61" y2="42.85" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1190.5" y1="30.06" x2="1190.5" y2="42.85" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1209.39" y1="30.06" x2="1209.39" y2="42.85" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1228.28" y1="30.06" x2="1228.28" y2="42.85" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1247.17" y1="30.06" x2="1247.17" y2="42.84" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1266.06" y1="30.05" x2="1266.06" y2="42.84" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1284.94" y1="30.05" x2="1284.94" y2="42.84" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1303.83" y1="30.05" x2="1303.83" y2="42.84" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1322.72" y1="30.05" x2="1322.72" y2="42.83" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1341.61" y1="30.05" x2="1341.61" y2="42.83" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1360.5" y1="30.04" x2="1360.5" y2="42.83" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1379.39" y1="30.04" x2="1379.39" y2="42.83" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1398.28" y1="30.04" x2="1398.28" y2="42.83" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1417.17" y1="30.04" x2="1417.17" y2="42.82" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1436.06" y1="30.03" x2="1436.06" y2="42.82" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1454.94" y1="30.03" x2="1454.94" y2="42.82" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1473.83" y1="30.03" x2="1473.83" y2="42.82" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1492.72" y1="30.03" x2="1492.72" y2="42.81" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1511.61" y1="30.02" x2="1511.61" y2="42.81" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1530.5" y1="30.02" x2="1530.5" y2="42.81" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1549.39" y1="30.02" x2="1549.39" y2="42.81" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1568.28" y1="30.02" x2="1568.28" y2="42.8" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1587.17" y1="30.01" x2="1587.17" y2="42.8" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1606.06" y1="30.01" x2="1606.06" y2="42.8" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1624.94" y1="30.01" x2="1624.94" y2="42.8" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1643.83" y1="30.01" x2="1643.83" y2="42.79" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1662.72" y1="30.01" x2="1662.72" y2="42.79" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1681.61" y1="30" x2="1681.61" y2="42.79" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1700.5" y1="30" x2="1700.5" y2="42.79" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                    </g>
+                    <g>
+                        <line x1="0.5" y1="30.5" x2="0.5" y2="60.5" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="189.39" y1="30.44" x2="189.39" y2="60.44" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="378.28" y1="30.39" x2="378.28" y2="60.39" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="567.17" y1="30.33" x2="567.17" y2="60.33" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="756.06" y1="30.28" x2="756.06" y2="60.28" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="944.94" y1="30.22" x2="944.94" y2="60.22" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="1133.83" y1="30.17" x2="1133.83" y2="60.17" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="1322.72" y1="30.11" x2="1322.72" y2="60.11" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="1511.61" y1="30.06" x2="1511.61" y2="60.06" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="1700.5" y1="30" x2="1700.5" y2="60" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                    </g>
+                    <polygon id="arrawH" points="76.5 31 85 0 68 0 76.5 31" style="fill: #86e85d;fill-rule: evenodd" />
+                </g>
+            </g>
+        </svg>
+        <!-- left Rulebegin -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.75 931.75" id="leftRuler" preserveAspectRatio="none">
+            <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                    <rect x="30.25" y="0.5" width="1" height="930.25" style="fill: #86e85d" />
+                    <g>
+                        <line x1="30.46" y1="931.25" x2="43.25" y2="931.25" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.46" y1="915.74" x2="43.25" y2="915.74" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.46" y1="900.22" x2="43.24" y2="900.22" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.45" y1="884.71" x2="43.24" y2="884.71" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.45" y1="869.2" x2="43.24" y2="869.2" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.45" y1="853.69" x2="43.23" y2="853.69" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.44" y1="838.17" x2="43.23" y2="838.17" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.44" y1="822.66" x2="43.23" y2="822.66" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.44" y1="807.15" x2="43.22" y2="807.15" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.43" y1="791.64" x2="43.22" y2="791.64" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.43" y1="776.12" x2="43.21" y2="776.12" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.42" y1="760.61" x2="43.21" y2="760.61" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.42" y1="745.1" x2="43.21" y2="745.1" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.42" y1="729.59" x2="43.2" y2="729.59" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.41" y1="714.07" x2="43.2" y2="714.07" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.41" y1="698.56" x2="43.2" y2="698.56" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.41" y1="683.05" x2="43.19" y2="683.05" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.4" y1="667.54" x2="43.19" y2="667.54" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.4" y1="652.02" x2="43.19" y2="652.02" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.4" y1="636.51" x2="43.18" y2="636.51" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.39" y1="621" x2="43.18" y2="621" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.39" y1="605.49" x2="43.18" y2="605.49" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.39" y1="589.97" x2="43.17" y2="589.97" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.38" y1="574.46" x2="43.17" y2="574.46" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.38" y1="558.95" x2="43.17" y2="558.95" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.37" y1="543.44" x2="43.16" y2="543.44" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.37" y1="527.92" x2="43.16" y2="527.92" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.37" y1="512.41" x2="43.15" y2="512.41" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.36" y1="496.9" x2="43.15" y2="496.9" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.36" y1="481.39" x2="43.15" y2="481.39" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.36" y1="465.87" x2="43.14" y2="465.87" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.35" y1="450.36" x2="43.14" y2="450.36" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.35" y1="434.85" x2="43.14" y2="434.85" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.35" y1="419.34" x2="43.13" y2="419.34" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.34" y1="403.82" x2="43.13" y2="403.82" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.34" y1="388.31" x2="43.13" y2="388.31" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.34" y1="372.8" x2="43.12" y2="372.8" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.33" y1="357.29" x2="43.12" y2="357.29" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.33" y1="341.77" x2="43.12" y2="341.77" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.32" y1="326.26" x2="43.11" y2="326.26" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.32" y1="310.75" x2="43.11" y2="310.75" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.32" y1="295.24" x2="43.1" y2="295.24" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.31" y1="279.72" x2="43.1" y2="279.72" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.31" y1="264.21" x2="43.1" y2="264.21" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.31" y1="248.7" x2="43.09" y2="248.7" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.3" y1="233.19" x2="43.09" y2="233.19" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.3" y1="217.67" x2="43.09" y2="217.67" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.3" y1="202.16" x2="43.08" y2="202.16" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.29" y1="186.65" x2="43.08" y2="186.65" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.29" y1="171.14" x2="43.08" y2="171.14" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.29" y1="155.62" x2="43.07" y2="155.62" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.28" y1="140.11" x2="43.07" y2="140.11" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.28" y1="124.6" x2="43.07" y2="124.6" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.28" y1="109.09" x2="43.06" y2="109.09" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.27" y1="93.57" x2="43.06" y2="93.57" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.27" y1="78.06" x2="43.05" y2="78.06" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.26" y1="62.55" x2="43.05" y2="62.55" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.26" y1="47.04" x2="43.05" y2="47.04" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.26" y1="31.52" x2="43.04" y2="31.52" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.25" y1="16.01" x2="43.04" y2="16.01" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.25" y1="0.5" x2="43.04" y2="0.5" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                    </g>
+                    <g>
+                        <line x1="30.75" y1="931.25" x2="60.75" y2="931.25" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="30.65" y1="745.1" x2="60.65" y2="745.1" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="30.55" y1="558.95" x2="60.55" y2="558.95" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="30.45" y1="372.8" x2="60.45" y2="372.8" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="30.35" y1="186.65" x2="60.35" y2="186.65" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="30.25" y1="0.5" x2="60.25" y2="0.5" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                    </g>
+                    <polygon id="arrawV" points="31 55.58 0 47.08 0 64.08 31 55.58" style="fill: #86e85d;fill-rule: evenodd" />
+                </g>
+            </g>
+        </svg>
+        <!-- right ruler -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.5 931.75" id="rightRuler" preserveAspectRatio="none">
+            <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                    <rect x="29.5" y="1" width="1" height="930.25" style="fill: #86e85d" />
+                    <g>
+                        <line x1="30.29" y1="0.5" x2="17.5" y2="0.5" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.29" y1="16.01" x2="17.5" y2="16.01" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.29" y1="31.53" x2="17.51" y2="31.53" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.3" y1="47.04" x2="17.51" y2="47.04" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.3" y1="62.55" x2="17.51" y2="62.55" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.3" y1="78.06" x2="17.52" y2="78.06" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.31" y1="93.58" x2="17.52" y2="93.58" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.31" y1="109.09" x2="17.52" y2="109.09" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.31" y1="124.6" x2="17.53" y2="124.6" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.32" y1="140.11" x2="17.53" y2="140.11" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.32" y1="155.63" x2="17.54" y2="155.63" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.33" y1="171.14" x2="17.54" y2="171.14" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.33" y1="186.65" x2="17.54" y2="186.65" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.33" y1="202.16" x2="17.55" y2="202.16" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.34" y1="217.68" x2="17.55" y2="217.68" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.34" y1="233.19" x2="17.55" y2="233.19" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.34" y1="248.7" x2="17.56" y2="248.7" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.35" y1="264.21" x2="17.56" y2="264.21" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.35" y1="279.73" x2="17.56" y2="279.73" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.35" y1="295.24" x2="17.57" y2="295.24" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.36" y1="310.75" x2="17.57" y2="310.75" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.36" y1="326.26" x2="17.57" y2="326.26" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.36" y1="341.78" x2="17.58" y2="341.78" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.37" y1="357.29" x2="17.58" y2="357.29" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.37" y1="372.8" x2="17.58" y2="372.8" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.38" y1="388.31" x2="17.59" y2="388.31" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.38" y1="403.83" x2="17.59" y2="403.83" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.38" y1="419.34" x2="17.6" y2="419.34" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.39" y1="434.85" x2="17.6" y2="434.85" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.39" y1="450.36" x2="17.6" y2="450.36" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.39" y1="465.88" x2="17.61" y2="465.88" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.4" y1="481.39" x2="17.61" y2="481.39" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.4" y1="496.9" x2="17.61" y2="496.9" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.4" y1="512.41" x2="17.62" y2="512.41" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.41" y1="527.93" x2="17.62" y2="527.93" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.41" y1="543.44" x2="17.62" y2="543.44" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.41" y1="558.95" x2="17.63" y2="558.95" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.42" y1="574.46" x2="17.63" y2="574.46" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.42" y1="589.98" x2="17.63" y2="589.98" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.43" y1="605.49" x2="17.64" y2="605.49" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.43" y1="621" x2="17.64" y2="621" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.43" y1="636.51" x2="17.65" y2="636.51" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.44" y1="652.03" x2="17.65" y2="652.03" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.44" y1="667.54" x2="17.65" y2="667.54" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.44" y1="683.05" x2="17.66" y2="683.05" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.45" y1="698.56" x2="17.66" y2="698.56" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.45" y1="714.08" x2="17.66" y2="714.08" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.45" y1="729.59" x2="17.67" y2="729.59" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.46" y1="745.1" x2="17.67" y2="745.1" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.46" y1="760.61" x2="17.67" y2="760.61" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.46" y1="776.13" x2="17.68" y2="776.13" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.47" y1="791.64" x2="17.68" y2="791.64" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.47" y1="807.15" x2="17.68" y2="807.15" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.47" y1="822.66" x2="17.69" y2="822.66" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.48" y1="838.18" x2="17.69" y2="838.18" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.48" y1="853.69" x2="17.7" y2="853.69" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.49" y1="869.2" x2="17.7" y2="869.2" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.49" y1="884.71" x2="17.7" y2="884.71" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.49" y1="900.23" x2="17.71" y2="900.23" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.5" y1="915.74" x2="17.71" y2="915.74" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="30.5" y1="931.25" x2="17.71" y2="931.25" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                    </g>
+                    <g>
+                        <line x1="30" y1="0.5" y2="0.5" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="30.1" y1="186.65" x2="0.1" y2="186.65" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="30.2" y1="372.8" x2="0.2" y2="372.8" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="30.3" y1="558.95" x2="0.3" y2="558.95" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="30.4" y1="745.1" x2="0.4" y2="745.1" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="30.5" y1="931.25" x2="0.5" y2="931.25" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                    </g>
+                </g>
+            </g>
+        </svg>
+        <!-- bottom svg begin -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1701 30.5" id="bottomRuler" preserveAspectRatio="none">
+            <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                    <rect x="0.5" y="29.5" width="1700" height="1" style="fill: #86e85d" />
+                    <g>
+                        <line x1="0.5" y1="30.29" x2="0.5" y2="17.5" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="19.39" y1="30.29" x2="19.39" y2="17.5" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="38.28" y1="30.29" x2="38.28" y2="17.5" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="57.17" y1="30.29" x2="57.17" y2="17.51" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="76.06" y1="30.3" x2="76.06" y2="17.51" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="94.94" y1="30.3" x2="94.94" y2="17.51" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="113.83" y1="30.3" x2="113.83" y2="17.51" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="132.72" y1="30.3" x2="132.72" y2="17.52" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="151.61" y1="30.31" x2="151.61" y2="17.52" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="170.5" y1="30.31" x2="170.5" y2="17.52" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="189.39" y1="30.31" x2="189.39" y2="17.52" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="208.28" y1="30.31" x2="208.28" y2="17.53" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="227.17" y1="30.31" x2="227.17" y2="17.53" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="246.06" y1="30.32" x2="246.06" y2="17.53" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="264.94" y1="30.32" x2="264.94" y2="17.53" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="283.83" y1="30.32" x2="283.83" y2="17.54" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="302.72" y1="30.32" x2="302.72" y2="17.54" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="321.61" y1="30.33" x2="321.61" y2="17.54" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="340.5" y1="30.33" x2="340.5" y2="17.54" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="359.39" y1="30.33" x2="359.39" y2="17.54" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="378.28" y1="30.33" x2="378.28" y2="17.55" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="397.17" y1="30.34" x2="397.17" y2="17.55" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="416.06" y1="30.34" x2="416.06" y2="17.55" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="434.94" y1="30.34" x2="434.94" y2="17.55" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="453.83" y1="30.34" x2="453.83" y2="17.56" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="472.72" y1="30.35" x2="472.72" y2="17.56" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="491.61" y1="30.35" x2="491.61" y2="17.56" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="510.5" y1="30.35" x2="510.5" y2="17.56" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="529.39" y1="30.35" x2="529.39" y2="17.57" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="548.28" y1="30.36" x2="548.28" y2="17.57" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="567.17" y1="30.36" x2="567.17" y2="17.57" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="586.06" y1="30.36" x2="586.06" y2="17.57" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="604.94" y1="30.36" x2="604.94" y2="17.58" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="623.83" y1="30.36" x2="623.83" y2="17.58" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="642.72" y1="30.37" x2="642.72" y2="17.58" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="661.61" y1="30.37" x2="661.61" y2="17.58" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="680.5" y1="30.37" x2="680.5" y2="17.58" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="699.39" y1="30.37" x2="699.39" y2="17.59" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="718.28" y1="30.38" x2="718.28" y2="17.59" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="737.17" y1="30.38" x2="737.17" y2="17.59" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="756.06" y1="30.38" x2="756.06" y2="17.59" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="774.94" y1="30.38" x2="774.94" y2="17.6" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="793.83" y1="30.39" x2="793.83" y2="17.6" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="812.72" y1="30.39" x2="812.72" y2="17.6" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="831.61" y1="30.39" x2="831.61" y2="17.6" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="850.5" y1="30.39" x2="850.5" y2="17.61" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="869.39" y1="30.4" x2="869.39" y2="17.61" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="888.28" y1="30.4" x2="888.28" y2="17.61" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="907.17" y1="30.4" x2="907.17" y2="17.61" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="926.06" y1="30.4" x2="926.06" y2="17.62" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="944.94" y1="30.4" x2="944.94" y2="17.62" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="963.83" y1="30.41" x2="963.83" y2="17.62" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="982.72" y1="30.41" x2="982.72" y2="17.62" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1001.61" y1="30.41" x2="1001.61" y2="17.63" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1020.5" y1="30.41" x2="1020.5" y2="17.63" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1039.39" y1="30.42" x2="1039.39" y2="17.63" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1058.28" y1="30.42" x2="1058.28" y2="17.63" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1077.17" y1="30.42" x2="1077.17" y2="17.63" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1096.06" y1="30.42" x2="1096.06" y2="17.64" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1114.94" y1="30.43" x2="1114.94" y2="17.64" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1133.83" y1="30.43" x2="1133.83" y2="17.64" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1152.72" y1="30.43" x2="1152.72" y2="17.64" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1171.61" y1="30.43" x2="1171.61" y2="17.65" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1190.5" y1="30.44" x2="1190.5" y2="17.65" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1209.39" y1="30.44" x2="1209.39" y2="17.65" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1228.28" y1="30.44" x2="1228.28" y2="17.65" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1247.17" y1="30.44" x2="1247.17" y2="17.66" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1266.06" y1="30.45" x2="1266.06" y2="17.66" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1284.94" y1="30.45" x2="1284.94" y2="17.66" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1303.83" y1="30.45" x2="1303.83" y2="17.66" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1322.72" y1="30.45" x2="1322.72" y2="17.67" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1341.61" y1="30.45" x2="1341.61" y2="17.67" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1360.5" y1="30.46" x2="1360.5" y2="17.67" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1379.39" y1="30.46" x2="1379.39" y2="17.67" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1398.28" y1="30.46" x2="1398.28" y2="17.67" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1417.17" y1="30.46" x2="1417.17" y2="17.68" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1436.06" y1="30.47" x2="1436.06" y2="17.68" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1454.94" y1="30.47" x2="1454.94" y2="17.68" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1473.83" y1="30.47" x2="1473.83" y2="17.68" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1492.72" y1="30.47" x2="1492.72" y2="17.69" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1511.61" y1="30.48" x2="1511.61" y2="17.69" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1530.5" y1="30.48" x2="1530.5" y2="17.69" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1549.39" y1="30.48" x2="1549.39" y2="17.69" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1568.28" y1="30.48" x2="1568.28" y2="17.7" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1587.17" y1="30.49" x2="1587.17" y2="17.7" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1606.06" y1="30.49" x2="1606.06" y2="17.7" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1624.94" y1="30.49" x2="1624.94" y2="17.7" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1643.83" y1="30.49" x2="1643.83" y2="17.71" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1662.72" y1="30.49" x2="1662.72" y2="17.71" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1681.61" y1="30.5" x2="1681.61" y2="17.71" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                        <line x1="1700.5" y1="30.5" x2="1700.5" y2="17.71" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10;stroke-width: 0.652861475944519px" />
+                    </g>
+                    <g>
+                        <line x1="0.5" y1="30" x2="0.5" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="189.39" y1="30.06" x2="189.39" y2="0.06" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="378.28" y1="30.11" x2="378.28" y2="0.11" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="567.17" y1="30.17" x2="567.17" y2="0.17" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="756.06" y1="30.22" x2="756.06" y2="0.22" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="944.94" y1="30.28" x2="944.94" y2="0.28" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="1133.83" y1="30.33" x2="1133.83" y2="0.33" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="1322.72" y1="30.39" x2="1322.72" y2="0.39" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="1511.61" y1="30.44" x2="1511.61" y2="0.44" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                        <line x1="1700.5" y1="30.5" x2="1700.5" y2="0.5" style="fill: none;stroke: #86e85d;stroke-miterlimit: 10" />
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
+    <!-- svg End -->
+    <div id="container">
+        <!-- dragable area -->
+        <div id="mapCanvas">
+            <!-- popbutton -->
+            <div class="Cartographer_open buttonDiv circle" href="#Cartographer">Cartographer</div>
+            <div class="SelfDriveVision_open buttonDiv circle" href="#SelfDriveVision"><span>Self-drive Vision</span></div>
+            <div class="CivilianGPS_open buttonDiv circle" href="#CivilianGPS"><span>Civilian GPS</span></div>
+            <div class="TrackEmployee_open buttonDiv circle" href="#TrackEmployee"><span>Track Employee</span></div>
+            <div class="TheTiny_open buttonDiv circle" href="#TheTiny"><span>The tiny tattletale</span></div>
+            <div class="FAAhurdles_open buttonDiv circle" href="#FAAhurdles"><span>FAA hurdles</span></div>
+            <div class="Panacea_open buttonDiv circle" href="#Panacea"><span>Panacea from sky</span></div>
+            <div class="DataAnts_open buttonDiv circle" href="#DataAnts"><span>Data Ants</span></div>
+            <div class="GoogleTraveler_open buttonDiv circle" href="#GoogleTraveler"><span>Google traveler</span></div>
+            <div class="DronSwatter_open buttonDiv circle" href="#DronSwatter"><span>Dron Swatter</span></div>
+            <div class="USvsJones_open buttonDiv circle" href="#USvsJones"><span>US vs Jones GPS </span></div>
+            <div class="ZombieDrone_open buttonDiv circle" href="#ZombieDrone"><span>Zombie Drone</span></div>
+            <div class="GPSJammer_open buttonDiv circle" href="#GPSJammer"><span>GPS Jammer</span></div>
+            <div class="AmazonAir_open buttonDiv circle" href="#AmazonAir"><span>Amazon on air</span></div>
+            <div class="HumanCargo_open buttonDiv circle" href="#HumanCargo"><span>Human Cargo</span></div>
+            <div class="Transition_open buttonDiv circle" href="#Transition"><span>The Transition</span></div>
+        </div>
+        <div id="lineH"></div>
+        <div id="lineV"></div>
+        <!-- popbutton end -->
+        <!-- moveclipBegin -->
+        <script src="asset/main.js"></script>
+        <!-- moveclipEnd -->
+        <!-- popup info -->
+        <div id="Cartographer" class="showup">
+            <div>
+                <h1>Cartographer</h1>
+                <a href="http://uber.github.io/deck.gl/#/examples/custom-layers/trip-routes">http://uber.github.io/deck.gl/#/examples/custom-layers/trip-routes</a>
+            </div>
+            <img src="img/Cartographer.jpg" width="200px" height="300px">
+            <p>You can close the dialog by pressing the
+                <kbd>Esc</kbd> key, or by clicking on the background outside the content area, or by clicking on the Close button.</p>
+            <div class="Cartographer_close buttonClose">X</div>
+        </div>
+        <!-- 2 -->
+        <div id="SelfDriveVision" class="showup">
+            <div>
+                <h1>Self-drive Vision</h1>
+                <a href="https://eng.uber.com/atg-dataviz/">https://eng.uber.com/atg-dataviz/</a>
+            </div>
+            <img src="img/SelfDriveVision.jpg" width="200px" height="300px">
+            <p>Earlier this year, the Data Visualization Team in Uber—which uses visualization for exploration, inspection, debugging and exposition of data—partnered with the ATG to improve how its self-driving vehicles (cars and trucks) interpret and perceive the world around them. This is critical for ensuring that users of this technology understand issues quickly, iterate fast, and increase productivity across a wide range of ever-evolving use cases. There was also a need for a simpler visual language and UX design to convey all of the detailed, technical information to operators and engineers.</p>
+            <div class="SelfDriveVision_close buttonClose">X</div>
+        </div>
+        <!--3 -->
+        <div id="CivilianGPS" class="showup">
+            <div>
+                <h1>Civilian GPS</h1>
+                <a href="https://en.wikipedia.org/wiki/Global_Positioning_System">https://en.wikipedia.org/wiki/Global_Positioning_System</a>
+            </div>
+            <img src="img/CivilianGPS.jpg" width="200px" height="300px">
+            <p>Civilian applications use one or more or GPS basic components: Absolute location, Relative movement, and Time transfer. U.S. government’s restrictions on civilian use include any GPS receivers capable of functioning above 18 km (60,000 feet) altitude and 515 m/s (1,000 knots) Augmentation systems can augment standard accuracy of about 15 meters to 3-5 meters.</p>
+            <div class="CivilianGPS_close buttonClose">X</div>
+        </div>
+        <!-- 4 -->
+        <div id="TrackEmployee" class="showup">
+            <div>
+                <h1>Track Employee</h1>
+                <a href="http://www.timesunion.com/local/article/GPS-used-to-track-fired-state-worker-raises-2172601.php#photo-1603209">http://www.timesunion.com/local/article/GPS-used-to-track-fired-state-worker-raises-2172601.php#photo-1603209</a>
+            </div>
+            <img src="img/TrackEmployee.jpg" width="200px" height="300px">
+            <p>Michael Cunningham was a truant employee of state Labor Department. Without obtaining a warrant, state investigators hid a GPS tracking device in the wheel of Michael Cunningham’s personal car and, for a month in 2008, tracked his movements day and night.</p>
+            <div class="TrackEmployee_close buttonClose">X</div>
+        </div>
+        <!-- 5 -->
+        <div id="TheTiny" class="showup">
+            <div>
+                <h1>The tiny tattletale</h1>
+                <a href="http://newatlas.com/trackerpad-gps-tracker-stickers/38611/">http://newatlas.com/trackerpad-gps-tracker-stickers/38611/</a>
+            </div>
+            <img src="img/TheTiny.jpg" width="200px" height="300px">
+            <p>Compared with the built-in GPS in smart phone, GPS modules can be better matched to their personal taste. It is very common for a PC-based GPS receiver to come bundled with a navigation software suite. It is surprising that this a tiny device plays such an critical roles in leaking privacy.
+            </p>
+            <div class="TheTiny_close buttonClose">X</div>
+        </div>
+        <!-- 6 -->
+        <div id="FAAhurdles" class="showup">
+            <div>
+                <h1>FAA hurdles</h1>
+                <a href="https://www.cbsnews.com/news/the-drone-next-door/">https://www.cbsnews.com/news/the-drone-next-door/</a>
+            </div>
+            <img src="img/FAAhurdles.jpg" width="200px" height="300px">
+            <p>The Federal Aviation Administration (FAA) hasÂ strict regulations for drones, which are technically called unmanned aircraft systems (UAS). Their use is permitted on a case-by-case basis, and has been authorized for firefighting, disaster relief, law enforcement, border patrol, and research and development. Drone use is banned in major urban areas and high-traffic airspace. They are also not yet permitted for exclusively commercial use</p>
+            <div class="FAAhurdles_close buttonClose">X</div>
+        </div>
+        <!-- 7 -->
+        <div id="Panacea" class="showup">
+            <div>
+                <h1>Panacea from sky</h1>
+                <a href="http://www.flyzipline.com">http://www.flyzipline.com</a>
+            </div>
+            <img src="img/Panacea.jpg" width="200px" height="300px">
+            <p>Zipline, San Francisco-based startup, improves access to medical supplies by flying over impassable mountains and washed-out roads, delivering directly to remote hospitals in remote Western Rwanda.</p>
+            <div class="Panacea_close buttonClose">X</div>
+        </div>
+        <!-- 8 -->
+        <div id="DataAnts" class="showup">
+            <div>
+                <h1>Data Ants</h1>
+                <a href="http://www.businessinsider.com/how-google-maps-knows-about-traffic-2015-11">http://www.businessinsider.com/how-google-maps-knows-about-traffic-2015-11</a>
+            </div>
+            <img src="img/DataAnts.jpg" width="200px" height="300px">
+            <p>Thanks to the GPS in cell phone, hundreds of millions of users like ants exloring the world give Google real-time data that it uses to analyze traffic and road conditions. With the built up history over last few years of what traffic is usually like on specific roads at specific times, Google maps can even predict how traffice will change over your dirve</p>
+            <div class="DataAnts_close buttonClose">X</div>
+        </div>
+        <!-- 9 -->
+        <div id="GoogleTraveler" class="showup">
+            <div>
+                <h1>Google-traveler</h1>
+                <a href="http://metro.co.uk/2017/07/12/woman-terrified-of-leaving-the-house-travels-the-world-with-google-street-view-6773513/">http://metro.co.uk/2017/07/12/woman-terrified-of-leaving-the-house-travels-the-world-with-google-street-view-6773513/</a>
+            </div>
+            <img src="img/test.jpg" width="200px" height="300px">
+            <p>Jacqui Kenny, an agoraphobic woman, scours countries and cities across the world and takes screenshots that capture a beautiful, unique, and otherworldly aesthetic, and posts them to Instagram. </p>
+            <div class="GoogleTraveler_close buttonClose">X</div>
+        </div>
+        <!-- 10 -->
+        <div id="DronSwatter" class="showup">
+            <div>
+                <h1>Dron Swatter</h1>
+                <a href="https://www.wired.com/story/watch-anti-drone-weapons-test/">https://www.wired.com/story/watch-anti-drone-weapons-test/</a>
+            </div>
+            <img src="img/DronSwatter.jpg" width="200px" height="300px">
+            <p>Earlier this year, the Data Visualization Team in Uber—which uses visualization for exploration, inspection, debugging and exposition of data—partnered with the ATG to improve how its self-driving vehicles (cars and trucks) interpret and perceive the world around them. This is critical for ensuring that users of this technology understand issues quickly, iterate fast, and increase productivity across a wide range of ever-evolving use cases. There was also a need for a simpler visual language and UX design to convey all of the detailed, technical information to operators and engineers.</p>
+            <div class="DronSwatter_close buttonClose">X</div>
+        </div>
+        <!-- 11 -->
+        <div id="USvsJones" class="showup">
+            <div>
+                <h1>US vs Jones GPS Data Ants</h1>
+                <a href="https://www.oyez.org/cases/2011/10-1259">https://www.oyez.org/cases/2011/10-1259</a>
+            </div>
+            <img src="img/USvsJones.jpg" width="200px" height="300px">
+            <p>Antoine Jones was arrested on Oct. 24, 2005, for drug possession after police attached a tracker to Jones’s Jeep -- without judicial approval -- and used it to follow him for a month The Court affirmed the judgment of the lower court, and held that the installation of a GPS tracking device on Jones’ vehicle, without a warrant, constituted an unlawful search under the Fourth Amendment.</p>
+            <div class="USvsJones_close buttonClose">X</div>
+        </div>
+        <!-- 12 -->
+        <div id="ZombieDrone" class="showup">
+            <div>
+                <h1>Zombie Drone</h1>
+                <a href="https://www.digitaltrends.com/cool-tech/diy-disable-drone/ ">https://www.digitaltrends.com/cool-tech/diy-disable-drone/ </a>
+            </div>
+            <img src="img/ZombieDrone.jpg" width="200px" height="300px">
+            <p>If you can convincingly fake a GPS signal, you can convince an drone into tracking your signal instead of the authentic one, and at that point you can control the UAV.</p>
+            <div class="ZombieDrone_close buttonClose">X</div>
+        </div>
+        <!-- 13 -->
+        <div id="GPSJammer" class="showup">
+            <div>
+                <h1>GPS Jammer</h1>
+                <a href="https://www.thesignaljammer.com/categories/GPS-Jammers/">https://www.thesignaljammer.com/categories/GPS-Jammers/</a>
+            </div>
+            <img src="img/GPSJammer.jpg" width="200px" height="300px">
+            <p>Jammers are also commonly called signal blockers, GPS jammers It can attack many vulnerable drone: Most GPS enabled drones ( DJI Phantom 1/2/3/4, DJI Inspire, DJI Mavic, Yuneec Brezee, Yuneec Thypoon, Yuneec Tornado, etc). And it just cost $20.
+            </p>
+            <div class="GPSJammer_close buttonClose">X</div>
+        </div>
+        <!-- 14 -->
+        <div id="AmazonAir" class="showup">
+            <div>
+                <h1>Amazon on air</h1>
+                <a href="http://www.thestar.com.my/tech/tech-news/2017/09/04/amazons-talking-delivery-drone-would-ask-for-help-if-it-fell-out-of-the-sky/">http://www.thestar.com.my/tech/tech-news/2017/09/04/amazons-talking-delivery-drone-would-ask-for-help-if-it-fell-out-of-the-sky/</a>
+            </div>
+            <img src="img/AmazonAir.jpg" width="200px" height="300px">
+            <p>Amazon and other logistics companies are working on their air cargo transport, which can deliver packages in 30 min or less. But this amazon prime air service is only aviliable in England rather than U.S. because of the FAA.</p>
+            <div class="AmazonAir_close buttonClose">X</div>
+        </div>
+        <!-- 15 -->
+        <div id="HumanCargo" class="showup">
+            <div>
+                <h1>Human Cargo</h1>
+                <a href="https://www.theguardian.com/technology/2016/jan/07/first-passenger-drone-makes-world-debut">https://www.theguardian.com/technology/2016/jan/07/first-passenger-drone-makes-world-debut</a>
+            </div>
+            <img src="img/HumanCargo.jpg" width="200px" height="300px">
+            <p>It’s the first passenger drone at CES, which is capable of carrying one passengers, while the passenger only need and can control it with a pad.</p>
+            <div class="HumanCargo_close buttonClose">X</div>
+        </div>
+        <!-- 16 -->
+        <div id="Transition" class="showup">
+            <div>
+                <h1>The Transition</h1>
+                <a href="https://www.terrafugia.com/about-terrafugia/">https://www.terrafugia.com/about-terrafugia/</a>
+            </div>
+            <img src="img/Transition.jpg" width="200px" height="300px">
+            <p>The Transition® is the world first practical flying car. It even runs on premium unleaded automotive gasoline, fits in a standard construction single-car garage, and convert between flight and drive modes in under a minute. But to take it off 50 Ft road and flying license are still required.</p>
+            <div class="Transition_close buttonClose">X</div>
+        </div>
+        <!-- popup js-->
+        <script type="text/javascript">
+        jQuery(document).ready(function() {
+            $('#Cartographer').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#SelfDriveVision').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#CivilianGPS').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#TrackEmployee').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#TheTiny').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#FAAhurdles').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#Panacea').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#DataAnts').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#GoogleTraveler').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#DronSwatter').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#USvsJones').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#ZombieDrone').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#GPSJammer').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#AmazonAir').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#HumanCargo').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+            $('#Transition').popup({
+                color: '#000000',
+                opacity: 0,
+            });
+
+        });
+        </script>
+        <!-- popup js end -->
+        <!-- popup info end -->
+    </div>
+</body>
+
+</html>

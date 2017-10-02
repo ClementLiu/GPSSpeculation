@@ -1,0 +1,352 @@
+#locationInfo {
+    color: #86e85d;
+}
+
+
+
+
+
+
+
+
+/*background img*/
+
+#backgroundImg {
+    position: absolute;
+    background-image: url("BG.jpg");
+    background-size: 105% 110%;
+    width: 105vw;
+    height: 110vh;
+    top: -10vh;
+    left: -5vw;
+    bottom: 0vh;
+    right: 0vw;
+    z-index: -10;
+}
+
+
+
+
+
+
+
+
+
+/*arrawlines begin*/
+
+#lineH {
+    position: absolute;
+    height: 94.5vh;
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #86e85d;
+    margin-left: 10vw;
+    margin-top: 4.4vh;
+}
+
+#lineV {
+    position: absolute;
+    height: 1px;
+    width: 95vw;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #86e85d;
+    margin-left: 3vw;
+    margin-top: 12.4vh;
+}
+
+
+
+
+
+
+
+
+
+
+/*arrawlines end*/
+
+
+/*svgControl begin*/
+
+div#svgContainer {
+    position: relative;
+}
+
+svg#topRuler {
+    position: absolute;
+    margin-top: -5vh;
+    margin-left: 6vw;
+    width: 87vw;
+    height: 5vh;
+}
+
+svg#bottomRuler {
+    position: absolute;
+    margin-top: 89vh;
+    margin-left: 6vw;
+    width: 87vw;
+    height: 3vh;
+}
+
+svg#leftRuler {
+    position: absolute;
+    margin-top: 2vh;
+    margin-left: 1vw;
+    width: 3vw;
+    height: 87vh;
+}
+
+svg#rightRuler {
+    position: absolute;
+    right: 0px;
+    margin-top: 2vh;
+    margin-right: 1vw;
+    width: 2vw;
+    height: 87vh;
+}
+
+
+
+
+
+
+
+
+/*svgControl end*/
+
+
+/*popupconent*/
+
+.showup {
+    background-color: black;
+    box-shadow: 0 0 10px;
+    width: 30em;
+    z-index: 10;
+    border-style: solid;
+    border-width: 2em 1px 1px 1px;
+    border-color: #86e85d;
+    color: #86e85d;
+    padding: 1em 1em 1em 1em;
+    clear: both;
+    /*font*/
+    font-family: roboto-mono, monospace;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.showup>img {
+    float: right;
+    margin-top: 1em;
+}
+
+.showup>div:nth-child(1) {
+    float: left;
+}
+
+.showup>p {
+    clear: left;
+    display: inline-table;
+}
+
+.showup a {
+    font-size: .1em;
+}
+
+.showup h1 {
+    margin-bottom: 0;
+}
+
+div.buttonClose {
+    position: absolute;
+    cursor: crosshair;
+    top: -25px;
+    right: 40px;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+/*slider begin*/
+
+
+/*.slider{
+    position: absolute;
+
+}*/
+
+
+/*slider end*/
+
+
+/*button begin*/
+
+div[href="#Cartographer"] {
+    margin-left: 5vw;
+    margin-top: 10vh;
+}
+
+div[href="#SelfDriveVision"] {
+    margin-left: 18vw;
+    margin-top: 14vh;
+}
+
+div[href="#CivilianGPS"] {
+    margin-left: 30vw;
+    margin-top: 10vh;
+}
+
+div[href="#TrackEmployee"] {
+    margin-left: 43vw;
+    margin-top: 10vh;
+}
+
+div[href="#TheTiny"] {
+    margin-left: 54vw;
+    margin-top: 21vh;
+}
+
+div[href="#FAAhurdles"] {
+    margin-left: 63vw;
+    margin-top: 16vh;
+}
+
+div[href="#Panacea"] {
+    margin-left: 73vw;
+    margin-top: 23vh;
+}
+
+div[href="#DataAnts"] {
+    margin-left: 21vw;
+    margin-top: 42vh;
+}
+
+div[href="#GoogleTraveler"] {
+    margin-left: 13vw;
+    margin-top: 55vh;
+}
+
+div[href="#DronSwatter"] {
+    margin-left: 33vw;
+    margin-top: 43vh;
+}
+
+div[href="#USvsJones"] {
+    margin-left: 45vw;
+    margin-top: 38vh;
+}
+
+div[href="#ZombieDrone"] {
+    margin-left: 31vw;
+    margin-top: 67vh;
+}
+
+div[href="#GPSJammer"] {
+    margin-left: 46vw;
+    margin-top: 56vh;
+}
+
+div[href="#AmazonAir"] {
+    margin-left: 56vw;
+    margin-top: 66vh;
+}
+
+div[href="#HumanCargo"] {
+    margin-left: 67vw;
+    margin-top: 56vh;
+}
+
+div[href="#Transition"] {
+    margin-left: 75vw;
+    margin-top: 46vh;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    color: #86e85d;
+    cursor: crosshair;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 80px;
+    text-align: center;
+    background: #000;
+    border-style: solid;
+    border-color: #86e85d;
+    border-width: 5px;
+}
+
+.circle>span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+
+
+/*slider begin*/
+
+.sliderContainerV {
+    position: absolute;
+    height: 95vh;
+    /*margin: auto;*/
+    margin-left: 2vw;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    /*right: 0;*/
+    /*overflow: auto;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*mapCanvas area*/
+
+#mapCanvas {
+    position: relative;
+    margin-left: 6vw;
+    margin-top: 2vw;
+    width: 87vw;
+    height: 44vw;
+    border: 2px solid #86e85d;
+    /*background-color: black;*/
+    background: url(line.svg);
+    z-index: 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*mapCanvas area end */
