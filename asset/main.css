@@ -9,6 +9,11 @@
 
 
 
+
+
+
+
+
 /*background img*/
 
 #backgroundImg {
@@ -23,6 +28,11 @@
     right: 0vw;
     z-index: -10;
 }
+
+
+
+
+
 
 
 
@@ -59,6 +69,11 @@
     margin-left: 3vw;
     margin-top: 12.4vh;
 }
+
+
+
+
+
 
 
 
@@ -118,6 +133,11 @@ svg#rightRuler {
 
 
 
+
+
+
+
+
 /*svgControl end*/
 
 
@@ -138,28 +158,35 @@ svg#rightRuler {
     font-family: roboto-mono, monospace;
     font-style: normal;
     font-weight: 300;
+    /*location*/
+    padding-top: 0px;
+    padding-left: 26px;
 }
 
-.showup>img {
+.showup>p>img {
     float: right;
-    margin-top: 1em;
+    margin-left: 2em;
+    margin-top: .5em;
 }
 
 .showup>div:nth-child(1) {
-    float: left;
+    /*float: left;*/
 }
 
 .showup>p {
     clear: left;
-    display: inline-table;
+    margin-top: 1.5em;
+    /*display: inline-table;*/
 }
 
 .showup a {
     font-size: .1em;
+    color: #484848;
 }
 
 .showup h1 {
-    margin-bottom: 0;
+    margin-bottom: -8px;
+    margin-top: 10px;
 }
 
 div.buttonClose {
@@ -169,6 +196,11 @@ div.buttonClose {
     right: 40px;
     color: #000;
 }
+
+
+
+
+
 
 
 
@@ -291,6 +323,7 @@ div[href="#Transition"] {
     border-style: solid;
     border-color: #86e85d;
     border-width: 5px;
+    font-family: roboto-mono, monospace;
 }
 
 .circle>span {
@@ -298,6 +331,11 @@ div[href="#Transition"] {
     vertical-align: middle;
     line-height: normal;
 }
+
+
+
+
+
 
 
 
@@ -329,6 +367,11 @@ div[href="#Transition"] {
 
 
 
+
+
+
+
+
 /*mapCanvas area*/
 
 #mapCanvas {
@@ -342,6 +385,11 @@ div[href="#Transition"] {
     background: url(line.svg);
     z-index: 3;
 }
+
+
+
+
+
 
 
 
